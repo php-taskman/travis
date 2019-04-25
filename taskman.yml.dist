@@ -1,0 +1,13 @@
+commands:
+    travis:run:
+        tasks:
+            - { task: "travis", file: "${travis.file}", section: "${travis.section}" }
+        options:
+            file:
+                config: travis.file
+                description: 'The YAML file.'
+                default: .travis.yml
+            section:
+                config: travis.section
+                description: 'The travis section file to execute.'
+                default: script
